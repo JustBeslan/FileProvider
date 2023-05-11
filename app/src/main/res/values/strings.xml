@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FileProvider</string>
+
+    <string name="permission_not_granted">Permission not granted</string>
+    <string name="ok">OK</string>
+    <string name="grant_permission">Grant permission</string>
+    <string name="path">Internal storage%s</string>
 </resources>

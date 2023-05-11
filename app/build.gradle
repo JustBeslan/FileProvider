@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'app.fileprovider'
+    namespace 'app.file_provider'
     compileSdk 33
 
     defaultConfig {
-        applicationId "app.fileprovider"
+        applicationId "app.file_provider"
         minSdk 26
         targetSdk 33
         versionCode 1

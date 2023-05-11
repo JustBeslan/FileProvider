@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="file"
+            type="app.file_provider.model.FileItem" />
+        <variable
+            name="clickListener"
+            type="app.file_provider.utils.FileClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:onClick="@{() -> clickListener.onClick(file)}">
+
+        <ImageView
+            android:id="@+id/fileIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fileIcon="@{file.iconDrawable}"
+            android:padding="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp">
+
+            <TextView
+                android:id="@+id/filename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{file.name}"
+                android:textColor="@color/black"
+                android:ellipsize="middle"
+                android:maxLines="1"
+                android:textSize="20sp"
+                android:layout_marginBottom="5dp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    createDate="@{file.createDate}"
+                    android:textStyle="italic"
+                    android:textColor="#575555"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="@{file.additionalInfo}"
+                    android:textStyle="italic"
+                    android:textColor="#575555"
+                    android:textSize="15sp" />
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

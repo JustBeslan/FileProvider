@@ -1,4 +1,4 @@
-package app.fileprovider
+package app.file_provider
 
 import org.junit.Test
 
